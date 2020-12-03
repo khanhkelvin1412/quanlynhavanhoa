@@ -20,7 +20,7 @@ public class Quanlynhavanhoa extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root;
-        root = FXMLLoader.load(getClass().getResource("/layout/register-form.fxml"));
+        root = FXMLLoader.load(getClass().getResource("/layout/register.fxml"));
         primaryStage.setTitle("Biểu mẫu đăng ký");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();

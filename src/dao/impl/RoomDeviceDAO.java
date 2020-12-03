@@ -1,10 +1,12 @@
 package dao.impl;
 
+
+
 import dao.IRoomDeviceDAO;
-import java.util.List;
 import mapper.RoomDeviceMapper;
 import model.Room_Device;
 
+import java.util.List;
 
 public class RoomDeviceDAO extends AbstractDAO<Room_Device> implements IRoomDeviceDAO {
 	
@@ -40,5 +42,12 @@ public class RoomDeviceDAO extends AbstractDAO<Room_Device> implements IRoomDevi
 	public void delete(Long id) {
 		String sql = "DELETE FROM room_device WHERE id = ?";
 		update(sql, id);
+	}
+
+	@Override
+	public Room_Device findByRoomIdAndDeviceId(Long roomId, Long deviceId) {
+		String sql = "SELECT * FROM room_device WHERE room_id = ? AND device_id = ?";
+		List<Room_Device> list = query(sql, new RoomDeviceMapper(), roomId, deviceId);
+		return list.isEmpty() ? null : list.get(0);
 	}
 }
