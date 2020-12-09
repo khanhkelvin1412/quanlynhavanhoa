@@ -8,8 +8,12 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="quanlynhavanhoa.jar" size="33389" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.11.jar" size="2036609" download="eager" />
+    <jar href="quanlynhavanhoa.jar" size="36923" download="eager" />
   </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="quanlynhavanhoa" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
   <jfx:javafx-desc  width="800" height="600" main-class="quanlynhavanhoa.Quanlynhavanhoa"  name="quanlynhavanhoa" />
   <update check="always"/>
 </jnlp>
