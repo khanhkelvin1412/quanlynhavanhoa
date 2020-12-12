@@ -1,14 +1,12 @@
 package dao;
 
-
-import model.FormInfo;
-
 import java.util.List;
+import model.Form_info;
 
-public interface IFormInfoDAO extends GenericDAO<FormInfo>{
-	List<FormInfo> findAll();
-	Long insertRoom(FormInfo form_info);
-	void updateRoom(FormInfo form_info);
-	FormInfo findOne(Long id);
+public interface IFormInfoDAO extends GenericDAO<Form_info>{
+	List<Form_info> findAll();
+	Long insertRoom(Form_info form_info);
+	void updateRoom(Form_info form_info);
+	Form_info findOne(Long id);
 	void delete(Long id);
 }

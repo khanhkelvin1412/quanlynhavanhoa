@@ -1,11 +1,10 @@
 package dao.impl;
 
-
 import dao.IDeviceDAO;
+import java.util.List;
 import mapper.DeviceMapper;
 import model.Device;
 
-import java.util.List;
 
 public class DeviceDAO extends AbstractDAO<Device> implements IDeviceDAO {
 
@@ -40,13 +39,6 @@ public class DeviceDAO extends AbstractDAO<Device> implements IDeviceDAO {
 	public void delete(Long id) {
 		String sql = "DELETE FROM device WHERE id = ?";
 		update(sql, id);
-	}
-
-	@Override
-	public Device findByName(String name, Integer status) {
-		String sql = "SELECT * FROM device WHERE name LIKE " + "'%" + name + "%'" + " AND status = ?";
-		List<Device> devices = query(sql, new DeviceMapper(), status);
-		return devices.isEmpty() ? null : devices.get(0);
 	}
 
 }

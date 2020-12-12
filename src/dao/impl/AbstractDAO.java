@@ -16,7 +16,7 @@ public class AbstractDAO<T> implements GenericDAO<T> {
 			//Class.forName("com.mysql.jdbc.Driver");
 			String url = "jdbc:mysql://localhost:3306/qlnvh";
 			String user = "root";
-			String password = "uchihamadara28@";
+			String password = "";
 			return DriverManager.getConnection(url, user, password);
 		} catch (SQLException e) {
 			return null;
