@@ -20,11 +20,12 @@
         </columns>
       </TableView>
       <Button fx:id="search" layoutX="748.0" layoutY="509.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" text="Tìm kiếm" />
-      <Button fx:id="pay" layoutX="389.0" layoutY="556.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="117.0" text="Thanh toán" />
+      <Button fx:id="pay" layoutX="330.0" layoutY="556.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="117.0" text="Thanh toán" />
       <TextField fx:id="name_search" layoutX="168.0" layoutY="509.0" />
       <TextField fx:id="phone_search" layoutX="541.0" layoutY="509.0" />
       <Label layoutX="113.0" layoutY="509.0" prefHeight="25.0" prefWidth="46.0" text="Tên" />
       <Label layoutX="447.0" layoutY="512.0" prefHeight="25.0" prefWidth="94.0" text="Điện thoại" />
       <Button fx:id="managerId" layoutX="77.0" layoutY="29.0" mnemonicParsing="false" text="Quản lý thiết bị" />
+      <Button fx:id="returnButton" layoutX="483.0" layoutY="556.0" mnemonicParsing="false" onAction="#returnHomePage" prefHeight="31.0" prefWidth="117.0" text="Quay lại" />
    </children>
 </AnchorPane>

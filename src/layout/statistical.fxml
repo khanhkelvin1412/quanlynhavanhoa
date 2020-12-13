@@ -22,6 +22,7 @@
             <TableColumn fx:id="quantity" minWidth="1.0" prefWidth="124.0" text="Số lượng" />
             <TableColumn fx:id="unit1" maxWidth="306.0" prefWidth="131.0" text="Đơn vị tính" />
             <TableColumn fx:id="status" minWidth="0.0" prefWidth="129.0" text="Số lượng hỏng" />
+            <TableColumn fx:id="roomId" minWidth="0.0" prefWidth="112.0" text="Phòng" />
         </columns>
       </TableView>
       <Button fx:id="goBack" layoutX="423.0" layoutY="545.0" mnemonicParsing="false" onAction="#goBackPage" prefHeight="31.0" prefWidth="82.0" text="Quay lại" />

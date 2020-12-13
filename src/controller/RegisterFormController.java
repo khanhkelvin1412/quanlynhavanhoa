@@ -383,7 +383,7 @@ public class RegisterFormController implements Initializable {
         form.setRoom(comboBoxFloor.getValue().toString());
 
        Long status =  infoService.save(form);
-           Redirect("index");
+       Redirect("require");
     }
 
 }
