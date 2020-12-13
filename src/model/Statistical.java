@@ -1,88 +1,88 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package model;
+    /*
+     * To change this license header, choose License Headers in Project Properties.
+     * To change this template file, choose Tools | Templates
+     * and open the template in the editor.
+     */
+    package model;
 
 
-public class Statistical {
-    public Statistical() {
-        
-    }
+    public class Statistical {
+        public Statistical() {
 
-    public Statistical(Integer id, String name, Integer quantity, String unit, int status, String comment, String room) { 
-        this.id = id;
-        this.name = name;
-        this.quantity = quantity;
-        this.unit = unit;
-        this.status = status;
-        this.comment = comment;
-        this.room = room; 
-    }
-        private Integer id;
-        private String name;
-        private Integer quantity;
-        private String unit;
-        private int status;
-        private String comment;
-        private String room; 
+        }
 
-    public Integer getId() {
-        return id;
-    }
+        public Statistical(Integer id, String name, Integer quantity, String unit, int status, String comment, String room) { 
+            this.id = id;
+            this.name = name;
+            this.quantity = quantity;
+            this.unit = unit;
+            this.status = status;
+            this.comment = comment;
+            this.room = room; 
+        }
+            private Integer id;
+            private String name;
+            private Integer quantity;
+            private String unit;
+            private int status;
+            private String comment;
+            private String room; 
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+        public Integer getId() {
+            return id;
+        }
 
-    public String getName() {
-        return name;
-    }
+        public void setId(Integer id) {
+            this.id = id;
+        }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+        public String getName() {
+            return name;
+        }
 
-    public Integer getQuantity() {
-        return quantity;
-    }
+        public void setName(String name) {
+            this.name = name;
+        }
 
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
+        public Integer getQuantity() {
+            return quantity;
+        }
 
-    public String getUnit() {
-        return unit;
-    }
+        public void setQuantity(Integer quantity) {
+            this.quantity = quantity;
+        }
 
-    public void setUnit(String unit) {
-        this.unit = unit;
-    }
+        public String getUnit() {
+            return unit;
+        }
 
-    public int getStatus() {
-        return status;
-    }
+        public void setUnit(String unit) {
+            this.unit = unit;
+        }
 
-    public void setStatus(int status) {
-        this.status = status;
-    }
+        public int getStatus() {
+            return status;
+        }
 
-    public String getComment() {
-        return comment;
-    }
+        public void setStatus(int status) {
+            this.status = status;
+        }
 
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
- 
-    public String getRoom() { 
-        return room; 
+        public String getComment() {
+            return comment;
+        }
+
+        public void setComment(String comment) {
+            this.comment = comment;
+        }
+
+        public String getRoom() { 
+            return room; 
+        } 
+
+        public void setRoom(String room) { 
+            this.room = room; 
+        } 
+
     } 
- 
-    public void setRoom(String room) { 
-        this.room = room; 
-    } 
-        
-} 
 

@@ -1,51 +1,51 @@
-package model;
+    package model;
 
-public class User {
-	private Integer id;
-	private String username;
-	private String password;
-	private Integer status;
-	
-	public User() {
-	}
+    public class User {
+            private Integer id;
+            private String username;
+            private String password;
+            private Integer status;
 
-	public User(Integer id, String username, String password, Integer status) {
-		this.id = id;
-		this.username = username;
-		this.password = password;
-		this.status = status;
-	}
+            public User() {
+            }
 
-	public Integer getId() {
-		return id;
-	}
+            public User(Integer id, String username, String password, Integer status) {
+                    this.id = id;
+                    this.username = username;
+                    this.password = password;
+                    this.status = status;
+            }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+            public Integer getId() {
+                    return id;
+            }
 
-	public String getUsername() {
-		return username;
-	}
+            public void setId(Integer id) {
+                    this.id = id;
+            }
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
+            public String getUsername() {
+                    return username;
+            }
 
-	public String getPassword() {
-		return password;
-	}
+            public void setUsername(String username) {
+                    this.username = username;
+            }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+            public String getPassword() {
+                    return password;
+            }
 
-	public Integer getStatus() {
-		return status;
-	}
+            public void setPassword(String password) {
+                    this.password = password;
+            }
 
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
-	
-}
+            public Integer getStatus() {
+                    return status;
+            }
+
+            public void setStatus(Integer status) {
+                    this.status = status;
+            }
+
+    }

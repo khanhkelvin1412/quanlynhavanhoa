@@ -1,42 +1,42 @@
-package model;
+    package model;
 
-import utils.Format;
+    import utils.Format;
 
-public class PayDevice{
-	private String device;
-	private Integer quantity;
-	private String price;
-	
-	public PayDevice() {
-	}
+    public class PayDevice{
+            private String device;
+            private Integer quantity;
+            private String price;
 
-	public PayDevice(String device, Integer quantity, String price) {
-		this.device = device;
-		this.quantity = quantity;
-		this.price = price;
-	}
+            public PayDevice() {
+            }
 
-	public String getDevice() {
-		return device;
-	}
+            public PayDevice(String device, Integer quantity, String price) {
+                    this.device = device;
+                    this.quantity = quantity;
+                    this.price = price;
+            }
 
-	public void setDevice(String device) {
-		this.device = device;
-	}
+            public String getDevice() {
+                    return device;
+            }
 
-	public Integer getQuantity() {
-		return quantity;
-	}
+            public void setDevice(String device) {
+                    this.device = device;
+            }
 
-	public void setQuantity(Integer quantity) {
-		this.quantity = quantity;
-	}
+            public Integer getQuantity() {
+                    return quantity;
+            }
 
-	public String getPrice() {
-		return price;
-	}
+            public void setQuantity(Integer quantity) {
+                    this.quantity = quantity;
+            }
 
-	public void setPrice(Long price) {
-		this.price = Format.formatMoney(price);
-	}
-}
+            public String getPrice() {
+                    return price;
+            }
+
+            public void setPrice(Long price) {
+                    this.price = Format.formatMoney(price);
+            }
+    }

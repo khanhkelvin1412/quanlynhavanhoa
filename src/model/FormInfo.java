@@ -1,260 +1,260 @@
-package model;
+    package model;
 
-import java.util.Date;
+    import java.util.Date;
 
-public class FormInfo {
-	private Integer id;
-	private String fullname;
-	private String address;
-	private String credit_card;
-	private Date birthday;
-	private String gender;
-	private String resident;
-	private String reason;
-	private Integer deposit;
-	private Integer status;
-	private Integer status_pay;
-	private Date date_of_allocation;
-	private String nation;
-	private String religion;
-	private String address_of_allocation;
-	private String phone;
-	private String permanent_address;
-	private Long sum_price;
-	private Integer chair;
-	private Integer table;
-	private Integer speaker;
-	private Integer radio;
-	private Integer projector;
-	private String room;
-	
-	public FormInfo() {
-	}
+    public class FormInfo {
+            private Integer id;
+            private String fullname;
+            private String address;
+            private String credit_card;
+            private Date birthday;
+            private String gender;
+            private String resident;
+            private String reason;
+            private Integer deposit;
+            private Integer status;
+            private Integer status_pay;
+            private Date date_of_allocation;
+            private String nation;
+            private String religion;
+            private String address_of_allocation;
+            private String phone;
+            private String permanent_address;
+            private Long sum_price;
+            private Integer chair;
+            private Integer table;
+            private Integer speaker;
+            private Integer radio;
+            private Integer projector;
+            private String room;
 
-	public FormInfo(Integer id, String fullname, String address, String credit_card, Date birthday, String gender,
-					String resident, String reason, Integer deposit, Integer status, Integer status_pay,
-					Date date_of_allocation, String nation, String religion, String address_of_allocation, String phone,
-					String permanent_address, Long sum_price) {
-		this.id = id;
-		this.fullname = fullname;
-		this.address = address;
-		this.credit_card = credit_card;
-		this.birthday = birthday;
-		this.gender = gender;
-		this.resident = resident;
-		this.reason = reason;
-		this.deposit = deposit;
-		this.status = status;
-		this.status_pay = status_pay;
-		this.date_of_allocation = date_of_allocation;
-		this.nation = nation;
-		this.religion = religion;
-		this.address_of_allocation = address_of_allocation;
-		this.phone = phone;
-		this.permanent_address = permanent_address;
-		this.sum_price = sum_price;
-	}
+            public FormInfo() {
+            }
 
-	public Integer getId() {
-		return id;
-	}
+            public FormInfo(Integer id, String fullname, String address, String credit_card, Date birthday, String gender,
+                                            String resident, String reason, Integer deposit, Integer status, Integer status_pay,
+                                            Date date_of_allocation, String nation, String religion, String address_of_allocation, String phone,
+                                            String permanent_address, Long sum_price) {
+                    this.id = id;
+                    this.fullname = fullname;
+                    this.address = address;
+                    this.credit_card = credit_card;
+                    this.birthday = birthday;
+                    this.gender = gender;
+                    this.resident = resident;
+                    this.reason = reason;
+                    this.deposit = deposit;
+                    this.status = status;
+                    this.status_pay = status_pay;
+                    this.date_of_allocation = date_of_allocation;
+                    this.nation = nation;
+                    this.religion = religion;
+                    this.address_of_allocation = address_of_allocation;
+                    this.phone = phone;
+                    this.permanent_address = permanent_address;
+                    this.sum_price = sum_price;
+            }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+            public Integer getId() {
+                    return id;
+            }
 
-	public String getFullname() {
-		return fullname;
-	}
+            public void setId(Integer id) {
+                    this.id = id;
+            }
 
-	public void setFullname(String fullname) {
-		this.fullname = fullname;
-	}
+            public String getFullname() {
+                    return fullname;
+            }
 
-	public String getAddress() {
-		return address;
-	}
+            public void setFullname(String fullname) {
+                    this.fullname = fullname;
+            }
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
+            public String getAddress() {
+                    return address;
+            }
 
-	public String getCredit_card() {
-		return credit_card;
-	}
+            public void setAddress(String address) {
+                    this.address = address;
+            }
 
-	public void setCredit_card(String credit_card) {
-		this.credit_card = credit_card;
-	}
+            public String getCredit_card() {
+                    return credit_card;
+            }
 
-	public Date getBirthday() {
-		return birthday;
-	}
+            public void setCredit_card(String credit_card) {
+                    this.credit_card = credit_card;
+            }
 
-	public void setBirthday(Date birthday) {
-		this.birthday = birthday;
-	}
+            public Date getBirthday() {
+                    return birthday;
+            }
 
-	public String getGender() {
-		return gender;
-	}
+            public void setBirthday(Date birthday) {
+                    this.birthday = birthday;
+            }
 
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
+            public String getGender() {
+                    return gender;
+            }
 
-	public String getResident() {
-		return resident;
-	}
+            public void setGender(String gender) {
+                    this.gender = gender;
+            }
 
-	public void setResident(String resident) {
-		this.resident = resident;
-	}
+            public String getResident() {
+                    return resident;
+            }
 
-	public String getReason() {
-		return reason;
-	}
+            public void setResident(String resident) {
+                    this.resident = resident;
+            }
 
-	public void setReason(String reason) {
-		this.reason = reason;
-	}
+            public String getReason() {
+                    return reason;
+            }
 
-	public Integer getDeposit() {
-		return deposit;
-	}
+            public void setReason(String reason) {
+                    this.reason = reason;
+            }
 
-	public void setDeposit(Integer deposit) {
-		this.deposit = deposit;
-	}
+            public Integer getDeposit() {
+                    return deposit;
+            }
 
-	public Integer getStatus() {
-		return status;
-	}
+            public void setDeposit(Integer deposit) {
+                    this.deposit = deposit;
+            }
 
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
+            public Integer getStatus() {
+                    return status;
+            }
 
-	public Integer getStatus_pay() {
-		return status_pay;
-	}
+            public void setStatus(Integer status) {
+                    this.status = status;
+            }
 
-	public void setStatus_pay(Integer status_pay) {
-		this.status_pay = status_pay;
-	}
+            public Integer getStatus_pay() {
+                    return status_pay;
+            }
 
-	public Date getDate_of_allocation() {
-		return date_of_allocation;
-	}
+            public void setStatus_pay(Integer status_pay) {
+                    this.status_pay = status_pay;
+            }
 
-	public void setDate_of_allocation(Date date_of_allocation) {
-		this.date_of_allocation = date_of_allocation;
-	}
+            public Date getDate_of_allocation() {
+                    return date_of_allocation;
+            }
 
-	public String getNation() {
-		return nation;
-	}
+            public void setDate_of_allocation(Date date_of_allocation) {
+                    this.date_of_allocation = date_of_allocation;
+            }
 
-	public void setNation(String nation) {
-		this.nation = nation;
-	}
+            public String getNation() {
+                    return nation;
+            }
 
-	public String getReligion() {
-		return religion;
-	}
+            public void setNation(String nation) {
+                    this.nation = nation;
+            }
 
-	public void setReligion(String religion) {
-		this.religion = religion;
-	}
+            public String getReligion() {
+                    return religion;
+            }
 
-	public String getAddress_of_allocation() {
-		return address_of_allocation;
-	}
+            public void setReligion(String religion) {
+                    this.religion = religion;
+            }
 
-	public void setAddress_of_allocation(String address_of_allocation) {
-		this.address_of_allocation = address_of_allocation;
-	}
+            public String getAddress_of_allocation() {
+                    return address_of_allocation;
+            }
 
-	public String getPhone() {
-		return phone;
-	}
+            public void setAddress_of_allocation(String address_of_allocation) {
+                    this.address_of_allocation = address_of_allocation;
+            }
 
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
+            public String getPhone() {
+                    return phone;
+            }
 
-	public String getPermanent_address() {
-		return permanent_address;
-	}
+            public void setPhone(String phone) {
+                    this.phone = phone;
+            }
 
-	public void setPermanent_address(String permanent_address) {
-		this.permanent_address = permanent_address;
-	}
+            public String getPermanent_address() {
+                    return permanent_address;
+            }
 
-	public Long getSum_price() {
-		return sum_price;
-	}
+            public void setPermanent_address(String permanent_address) {
+                    this.permanent_address = permanent_address;
+            }
 
-	public void setSum_price(Long sum_price) {
-		this.sum_price = sum_price;
-	}
+            public Long getSum_price() {
+                    return sum_price;
+            }
 
-	public Integer getChair() {
-		return chair;
-	}
+            public void setSum_price(Long sum_price) {
+                    this.sum_price = sum_price;
+            }
 
-	public void setChair(Integer chair) {
-		this.chair = chair;
-	}
+            public Integer getChair() {
+                    return chair;
+            }
 
-	public Integer getTable() {
-		return table;
-	}
+            public void setChair(Integer chair) {
+                    this.chair = chair;
+            }
 
-	public void setTable(Integer table) {
-		this.table = table;
-	}
+            public Integer getTable() {
+                    return table;
+            }
 
-	public Integer getSpeaker() {
-		return speaker;
-	}
+            public void setTable(Integer table) {
+                    this.table = table;
+            }
 
-	public void setSpeaker(Integer speaker) {
-		this.speaker = speaker;
-	}
+            public Integer getSpeaker() {
+                    return speaker;
+            }
 
-	public Integer getRadio() {
-		return radio;
-	}
+            public void setSpeaker(Integer speaker) {
+                    this.speaker = speaker;
+            }
 
-	public void setRadio(Integer radio) {
-		this.radio = radio;
-	}
+            public Integer getRadio() {
+                    return radio;
+            }
 
-	public Integer getProjector() {
-		return projector;
-	}
+            public void setRadio(Integer radio) {
+                    this.radio = radio;
+            }
 
-	public void setProjector(Integer projector) {
-		this.projector = projector;
-	}
+            public Integer getProjector() {
+                    return projector;
+            }
 
-	public String getRoom() {
-		return room;
-	}
+            public void setProjector(Integer projector) {
+                    this.projector = projector;
+            }
 
-	public void setRoom(String room) {
-		this.room = room;
-	}
-        
-        public Integer getQuantity(int i) {
-		switch (i) {
-		case 0: return getTable();
-		case 1: return getChair();
-		case 2: return getSpeaker();
-		case 3: return getProjector();
-		case 4: return getRadio();
-		default: return 0;
-		}
-	}
-}
+            public String getRoom() {
+                    return room;
+            }
+
+            public void setRoom(String room) {
+                    this.room = room;
+            }
+
+            public Integer getQuantity(int i) {
+                    switch (i) {
+                    case 0: return getTable();
+                    case 1: return getChair();
+                    case 2: return getSpeaker();
+                    case 3: return getProjector();
+                    case 4: return getRadio();
+                    default: return 0;
+                    }
+            }
+    }

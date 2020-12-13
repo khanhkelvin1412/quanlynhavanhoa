@@ -1,80 +1,80 @@
-package model;
+    package model;
 
-public class FormTable{
-	private Integer ID;
-	private String name;
-	private String phone;
-	private String room;
-	private Integer deposit;
-	private String reason;
-	private Long sumPrice;
-	
-	public FormTable() {
-	}
+    public class FormTable{
+            private Integer ID;
+            private String name;
+            private String phone;
+            private String room;
+            private Integer deposit;
+            private String reason;
+            private Long sumPrice;
 
-	public FormTable(FormInfo form) {
-		this.ID = form.getId();
-		this.name = form.getFullname();
-		this.phone = form.getPhone();
-		this.room = form.getRoom();
-		this.deposit = form.getDeposit();
-		this.reason = form.getReason();
-		this.sumPrice = form.getSum_price();
-	}
+            public FormTable() {
+            }
 
-	public Integer getID() {
-		return ID;
-	}
+            public FormTable(FormInfo form) {
+                    this.ID = form.getId();
+                    this.name = form.getFullname();
+                    this.phone = form.getPhone();
+                    this.room = form.getRoom();
+                    this.deposit = form.getDeposit();
+                    this.reason = form.getReason();
+                    this.sumPrice = form.getSum_price();
+            }
 
-	public void setID(Integer iD) {
-		ID = iD;
-	}
+            public Integer getID() {
+                    return ID;
+            }
 
-	public String getName() {
-		return name;
-	}
+            public void setID(Integer iD) {
+                    ID = iD;
+            }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+            public String getName() {
+                    return name;
+            }
 
-	public String getPhone() {
-		return phone;
-	}
+            public void setName(String name) {
+                    this.name = name;
+            }
 
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
+            public String getPhone() {
+                    return phone;
+            }
 
-	public String getRoom() {
-		return room;
-	}
+            public void setPhone(String phone) {
+                    this.phone = phone;
+            }
 
-	public void setRoom(String room) {
-		this.room = room;
-	}
+            public String getRoom() {
+                    return room;
+            }
 
-	public Integer getDeposit() {
-		return deposit;
-	}
+            public void setRoom(String room) {
+                    this.room = room;
+            }
 
-	public void setDeposit(Integer deposit) {
-		this.deposit = deposit;
-	}
+            public Integer getDeposit() {
+                    return deposit;
+            }
 
-	public String getReason() {
-		return reason;
-	}
+            public void setDeposit(Integer deposit) {
+                    this.deposit = deposit;
+            }
 
-	public void setReason(String reason) {
-		this.reason = reason;
-	}
+            public String getReason() {
+                    return reason;
+            }
 
-	public Long getSumPrice() {
-		return sumPrice;
-	}
+            public void setReason(String reason) {
+                    this.reason = reason;
+            }
 
-	public void setSumPrice(Long sumPrice) {
-		this.sumPrice = sumPrice;
-	}
-}
+            public Long getSumPrice() {
+                    return sumPrice;
+            }
+
+            public void setSumPrice(Long sumPrice) {
+                    this.sumPrice = sumPrice;
+            }
+    }
