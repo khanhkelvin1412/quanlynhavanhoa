@@ -13,12 +13,12 @@ import model.Statistical;
 
 
  
-public class StatisticalImpl extends AbstractDAO<Statistical> implements IStatisticalDAO{
+public class StatisticalImpl extends AbstractDAO<Statistical> implements IStatisticalDAO{ 
 
     @Override
     public List<Statistical> findAll() {
-        String sql = "SELECT * FROM (room_device INNER JOIN device ON room_device.device_id = device.id inner join room on room.id = room_device.room_id) ";
-        return query(sql, new StatisticalMapper()); 
+         String sql = "SELECT * FROM (room_device INNER JOIN device ON room_device.device_id = device.id inner join room on room.id = room_device.room_id) ";
+         return query(sql, new StatisticalMapper()); 
     }
 
     @Override
