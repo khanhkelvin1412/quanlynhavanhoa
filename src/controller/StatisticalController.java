@@ -54,6 +54,9 @@ public class StatisticalController implements  Initializable{
     TableColumn<Statistical, Number> status;
     
     @FXML
+    TableColumn<Statistical, String> roomId;
+    
+    @FXML
     Button goBack;
     
     @Override
@@ -64,6 +67,7 @@ public class StatisticalController implements  Initializable{
         quantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         unit1.setCellValueFactory(new PropertyValueFactory<>("unit"));
         status.setCellValueFactory(new PropertyValueFactory<>("status"));
+        roomId.setCellValueFactory(new PropertyValueFactory<>("room"));
         
         IStatisticalDAO istatisticalDAO = new StatisticalImpl();
         List<Statistical> list = istatisticalDAO.findAll();

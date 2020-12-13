@@ -60,6 +60,9 @@ public class ManagerController implements Initializable {
 
     @FXML
     TextField name_search;
+    
+    @FXML
+    Button returnButton;
 
     @FXML
     TextField phone_search;
@@ -157,6 +160,20 @@ public class ManagerController implements Initializable {
         try {
             root = FXMLLoader.load(this.getClass().getResource("/layout/payLayout.fxml"));
             stage.setTitle("Thanh toán");
+            scene = new Scene(root);
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    public void returnHomePage(ActionEvent event) {
+        Stage stage = Store.getInstance().getStage();
+        Parent root = null;
+        Scene scene = null;
+        try {
+            root = FXMLLoader.load(this.getClass().getResource("/layout/index.fxml"));
             scene = new Scene(root);
         } catch (IOException e1) {
             e1.printStackTrace();
