@@ -13,7 +13,7 @@ import model.Statistical;
 
 
  
-public class StatisticalDAO extends AbstractDAO<Statistical> implements IStatisticalDAO{
+public class StatisticalImpl extends AbstractDAO<Statistical> implements IStatisticalDAO{
 
     @Override
     public List<Statistical> findAll() {
