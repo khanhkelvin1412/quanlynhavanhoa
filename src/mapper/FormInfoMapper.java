@@ -10,8 +10,8 @@ public class FormInfoMapper implements RowMapper<FormInfo>{
 		try {
 			FormInfo form = new FormInfo();
 			form.setId(rs.getInt("id"));
-			form.setFullname(rs.getString("fullname"));
-			form.setAddress(rs.getString("adress"));
+			form.setFullname(rs.getString("full_name"));
+			form.setAddress(rs.getString("address"));
 			form.setCredit_card(rs.getString("credit_card"));
 			form.setBirthday(rs.getDate("birthday"));
 			form.setGender(rs.getString("gender"));

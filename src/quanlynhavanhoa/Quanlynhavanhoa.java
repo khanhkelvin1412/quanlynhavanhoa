@@ -5,6 +5,7 @@
  */
 package quanlynhavanhoa;
 
+import controller.Store;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,7 +21,8 @@ public class Quanlynhavanhoa extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root;
-        root = FXMLLoader.load(getClass().getResource("/layout/register.fxml"));
+        Store.getInstance().setStage(primaryStage);
+        root = FXMLLoader.load(getClass().getResource("/layout/index.fxml"));
         primaryStage.setTitle("Biểu mẫu đăng ký");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
