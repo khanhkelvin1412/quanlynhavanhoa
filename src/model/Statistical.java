@@ -11,14 +11,14 @@ public class Statistical {
         
     }
 
-    public Statistical(Integer id, String name, Integer quantity, String unit, int status, String comment, String room) {
+    public Statistical(Integer id, String name, Integer quantity, String unit, int status, String comment, String room) { 
         this.id = id;
         this.name = name;
         this.quantity = quantity;
         this.unit = unit;
         this.status = status;
         this.comment = comment;
-        this.room = room;
+        this.room = room; 
     }
         private Integer id;
         private String name;
@@ -26,7 +26,7 @@ public class Statistical {
         private String unit;
         private int status;
         private String comment;
-        private String room;
+        private String room; 
 
     public Integer getId() {
         return id;
@@ -75,14 +75,14 @@ public class Statistical {
     public void setComment(String comment) {
         this.comment = comment;
     }
-
-    public String getRoom() {
-        return room;
-    }
-
-    public void setRoom(String room) {
-        this.room = room;
-    }
+ 
+    public String getRoom() { 
+        return room; 
+    } 
+ 
+    public void setRoom(String room) { 
+        this.room = room; 
+    } 
         
-}
+} 
 

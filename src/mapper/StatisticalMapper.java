@@ -21,7 +21,7 @@ public class StatisticalMapper implements RowMapper<Statistical>{
                         st.setQuantity(rs.getInt("quantity"));
                         st.setStatus(rs.getInt("broken_quantity"));
                         st.setUnit(rs.getString("unitl"));
-                        st.setRoom("Phòng " + rs.getInt("floor")  + "." + rs.getInt("number_floor"));
+                        st.setRoom("Phòng " + rs.getInt("floor")  + "." + rs.getInt("number_floor")); 
                         
 			return st;
 		} catch (Exception e) {

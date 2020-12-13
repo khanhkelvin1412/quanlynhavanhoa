@@ -6,24 +6,24 @@
 package controller;
 
 import dao.IStatisticalDAO;
-import dao.impl.StatisticalImpl;
-import java.io.IOException;
-import java.net.URL;
+import dao.impl.StatisticalImpl; 
+import java.io.IOException; 
+import java.net.URL;  
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
-import javafx.event.ActionEvent;
+import javafx.event.ActionEvent; 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.fxml.FXMLLoader; 
+import javafx.fxml.Initializable; 
+import javafx.scene.Parent; 
+import javafx.scene.Scene; 
+import javafx.scene.control.Button; 
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
+import javafx.stage.Stage; 
 import model.Statistical;
 
 /**
@@ -53,12 +53,12 @@ public class StatisticalController implements  Initializable{
     @FXML
     TableColumn<Statistical, Number> status;
     
-    @FXML
-    TableColumn<Statistical, String> roomId;
-    
-    @FXML
-    Button goBack;
-    
+    @FXML 
+    TableColumn<Statistical, String> roomId; 
+     
+    @FXML 
+    Button goBack; 
+     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         stt.setCellValueFactory(column -> new ReadOnlyObjectWrapper<Number>(table.getItems().indexOf(column.getValue()) + 1));
@@ -67,26 +67,26 @@ public class StatisticalController implements  Initializable{
         quantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         unit1.setCellValueFactory(new PropertyValueFactory<>("unit"));
         status.setCellValueFactory(new PropertyValueFactory<>("status"));
-        roomId.setCellValueFactory(new PropertyValueFactory<>("room"));
+        roomId.setCellValueFactory(new PropertyValueFactory<>("room")); 
         
         IStatisticalDAO istatisticalDAO = new StatisticalImpl();
         List<Statistical> list = istatisticalDAO.findAll();
         table.setItems(FXCollections.observableArrayList(list));
     }
     
-    public void goBackPage(ActionEvent event) {
-         Stage stage = Store.getInstance().getStage();
-        Parent root = null;
-        Scene scene = null;
-        try {
-            root = FXMLLoader.load(this.getClass().getResource("/layout/manager-layout.fxml"));
-            scene = new Scene(root);
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-        stage.setScene(scene);
-        stage.show();
-    }
-    
+    public void goBackPage(ActionEvent event) {  
+         Stage stage = Store.getInstance().getStage(); 
+        Parent root = null; 
+        Scene scene = null; 
+        try { 
+            root = FXMLLoader.load(this.getClass().getResource("/layout/manager-layout.fxml")); 
+            scene = new Scene(root); 
+        } catch (IOException e1) { 
+            e1.printStackTrace(); 
+        } 
+        stage.setScene(scene); 
+        stage.show(); 
+    } 
+     
     
 }
