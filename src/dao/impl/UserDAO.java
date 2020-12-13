@@ -40,4 +40,12 @@ public class UserDAO extends AbstractDAO<User> implements IUserDAO {
 		update(sql, id);
 	}
 
+    @Override
+    public User findByName(String name) {
+        String sql = "SELECT * from user where username = '" + name + "'";
+        List<User> user = query(sql, new UserMapper());
+        return user.isEmpty() ? null : user.get(0);
+        
+    }
+
 }

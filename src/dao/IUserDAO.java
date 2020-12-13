@@ -9,4 +9,5 @@ public interface IUserDAO extends GenericDAO<User>{
 	void updateUser(User user);
 	User findOne(Long id);
 	void delete(Long id);
+        User findByName(String name);
 }

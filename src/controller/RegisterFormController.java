@@ -1,5 +1,6 @@
 package controller;
 
+import java.io.IOException;
 import model.*;
 import service.FormInfoService;
 import service.service_impl.DeviceServiceImpl;
@@ -21,6 +22,11 @@ import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.*;
+import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class RegisterFormController implements Initializable {
 
@@ -84,6 +90,9 @@ public class RegisterFormController implements Initializable {
     @FXML
     private Label noteId;
 
+    @FXML
+    private Button back;
+
     private Long totalPriceFinal;
 
     private NumberDeviceRegister numberDeviceRegister = new NumberDeviceRegister();
@@ -132,6 +141,27 @@ public class RegisterFormController implements Initializable {
 
         comboBoxFloor.setItems(rooms);
         comboBoxDevice.setItems(devices);
+        
+        back.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                Redirect("index");
+            }
+        });
+    }
+
+    private void Redirect(String file) {
+        Stage stage = Store.getInstance().getStage();
+        Parent root = null;
+        Scene scene = null;
+        try {
+            root = FXMLLoader.load(this.getClass().getResource("/layout/" + file + ".fxml"));
+            scene = new Scene(root);
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void keyupMainName(ActionEvent actionEvent) {
@@ -197,14 +227,14 @@ public class RegisterFormController implements Initializable {
                     Integer total = Integer.parseInt(quantity.getText());
                     int i = idOfDevice.intValue();
                     if (total > roomDevice.getQuantity()) {
-                        noteId.setText(comboBoxFloor.getValue() + " chỉ còn " + roomDevice.getQuantity()  + " " + comboBoxDevice.getValue());
+                        noteId.setText(comboBoxFloor.getValue() + " chỉ còn " + roomDevice.getQuantity() + " " + comboBoxDevice.getValue());
                         noteId.setTextFill(Color.web("red"));
                     } else {
                         switch (i) {
                             case 1:
                                 if (numberDeviceRegister.isHasTable()) {
                                     if (total + numberDeviceRegister.getNumberTable() > roomDevice.getQuantity()) {
-                                        noteId.setText(comboBoxFloor.getValue() + " chỉ còn " + (roomDevice.getQuantity() - numberDeviceRegister.getNumberTable())  + " " + comboBoxDevice.getValue());
+                                        noteId.setText(comboBoxFloor.getValue() + " chỉ còn " + (roomDevice.getQuantity() - numberDeviceRegister.getNumberTable()) + " " + comboBoxDevice.getValue());
                                         noteId.setTextFill(Color.web("red"));
                                     } else {
                                         numberDeviceRegister.setNumberTable(total + numberDeviceRegister.getNumberTable());
@@ -219,7 +249,7 @@ public class RegisterFormController implements Initializable {
                             case 2:
                                 if (numberDeviceRegister.isHasChair()) {
                                     if (total + numberDeviceRegister.getNumberChair() > roomDevice.getQuantity()) {
-                                        noteId.setText(comboBoxFloor.getValue() + " chỉ còn " + (roomDevice.getQuantity() - numberDeviceRegister.getNumberChair())  + " " + comboBoxDevice.getValue());
+                                        noteId.setText(comboBoxFloor.getValue() + " chỉ còn " + (roomDevice.getQuantity() - numberDeviceRegister.getNumberChair()) + " " + comboBoxDevice.getValue());
                                         noteId.setTextFill(Color.web("red"));
                                     } else {
                                         numberDeviceRegister.setNumberChair(total + numberDeviceRegister.getNumberChair());
@@ -234,7 +264,7 @@ public class RegisterFormController implements Initializable {
                             case 3:
                                 if (numberDeviceRegister.isHasSpeaker()) {
                                     if (total + numberDeviceRegister.getNumberSpeaker() > roomDevice.getQuantity()) {
-                                        noteId.setText(comboBoxFloor.getValue() + " chỉ còn " + (roomDevice.getQuantity() - numberDeviceRegister.getNumberSpeaker())  + " " + comboBoxDevice.getValue());
+                                        noteId.setText(comboBoxFloor.getValue() + " chỉ còn " + (roomDevice.getQuantity() - numberDeviceRegister.getNumberSpeaker()) + " " + comboBoxDevice.getValue());
                                         noteId.setTextFill(Color.web("red"));
                                     } else {
                                         numberDeviceRegister.setNumberSpeaker(total + numberDeviceRegister.getNumberSpeaker());
@@ -249,7 +279,7 @@ public class RegisterFormController implements Initializable {
                             case 4:
                                 if (numberDeviceRegister.isHasRadio()) {
                                     if (total + numberDeviceRegister.getNumberRadio() > roomDevice.getQuantity()) {
-                                        noteId.setText(comboBoxFloor.getValue() + " chỉ còn " + (roomDevice.getQuantity() - numberDeviceRegister.getNumberRadio())  + " " + comboBoxDevice.getValue());
+                                        noteId.setText(comboBoxFloor.getValue() + " chỉ còn " + (roomDevice.getQuantity() - numberDeviceRegister.getNumberRadio()) + " " + comboBoxDevice.getValue());
                                         noteId.setTextFill(Color.web("red"));
                                     } else {
                                         numberDeviceRegister.setNumberRadio(total + numberDeviceRegister.getNumberRadio());
@@ -264,7 +294,7 @@ public class RegisterFormController implements Initializable {
                             case 5:
                                 if (numberDeviceRegister.isHasProjector()) {
                                     if (total + numberDeviceRegister.getNumberProjector() > roomDevice.getQuantity()) {
-                                        noteId.setText(comboBoxFloor.getValue() + " chỉ còn " + (roomDevice.getQuantity() - numberDeviceRegister.getNumberProjector())  + " " + comboBoxDevice.getValue());
+                                        noteId.setText(comboBoxFloor.getValue() + " chỉ còn " + (roomDevice.getQuantity() - numberDeviceRegister.getNumberProjector()) + " " + comboBoxDevice.getValue());
                                         noteId.setTextFill(Color.web("red"));
                                     } else {
                                         numberDeviceRegister.setNumberProjector(total + numberDeviceRegister.getNumberProjector());
@@ -313,7 +343,7 @@ public class RegisterFormController implements Initializable {
                 }
 
                 contentInfo.append("\n----------------------------------------\n");
-                contentInfo.append("Tổng tiền: " + Format.formatMoney(totalPrice));
+                contentInfo.append("Tổng tiền: " + Format.formatMoney(totalPrice/1000));
                 this.totalPriceFinal = totalPrice;
 
                 contentRent.setText(contentInfo.toString());
@@ -321,7 +351,6 @@ public class RegisterFormController implements Initializable {
 
         }
     }
-
 
     public void saveForm(ActionEvent actionEvent) {
         FormInfo form = new FormInfo();
@@ -353,8 +382,8 @@ public class RegisterFormController implements Initializable {
         form.setProjector(this.numberDeviceRegister.getNumberProjector());
         form.setRoom(comboBoxFloor.getValue().toString());
 
-
-        infoService.save(form);
+       Long status =  infoService.save(form);
+           Redirect("index");
     }
 
 }

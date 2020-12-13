@@ -246,4 +246,15 @@ public class FormInfo {
 	public void setRoom(String room) {
 		this.room = room;
 	}
+        
+        public Integer getQuantity(int i) {
+		switch (i) {
+		case 0: return getTable();
+		case 1: return getChair();
+		case 2: return getSpeaker();
+		case 3: return getProjector();
+		case 4: return getRadio();
+		default: return 0;
+		}
+	}
 }
