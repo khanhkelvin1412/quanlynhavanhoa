@@ -1,9 +1,11 @@
 package service.service_impl;
 
-import dao.impl.FormInfoDAO;
+
 import java.util.List;
-import model.FormInfo;
+
+import dao.impl.FormInfoDAO;
 import service.FormInfoService;
+import model.FormInfo;
 
 public class FormInfoServiceImpl implements FormInfoService {
 
@@ -14,24 +16,30 @@ public class FormInfoServiceImpl implements FormInfoService {
         return formInfoDAO.insertRoom(form);
     }
     
-    @Override
-	public FormInfo findOne(Integer id) {
-		return formInfoDAO.findOne(id);
-	}
         
     @Override
 	public void updateRoom(FormInfo form_info) {
 		formInfoDAO.updateRoom(form_info);
 	}
+
+
+	@Override
+	public FormInfo findOne(Integer id) {
+		return formInfoDAO.findOne(id);
+	}
         
-        @Override
+    @Override
 	public List<FormInfo> searchForm(FormInfo form) {
-                List<FormInfo> list = formInfoDAO.searchForm(form);
-		return list.isEmpty() ? null : list;
+        List<FormInfo> list = formInfoDAO.searchForm(form);
+        if (list.isEmpty()) {
+        	return null;
+        } else {
+        	return list;
+        }
 	}
         
-        @Override
+    @Override
 	public List<FormInfo> findAll() {
-		return formInfoDAO.findAll();
-	}
+		return formInfoDAO.findAll();}
+
 }

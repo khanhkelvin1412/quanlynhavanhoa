@@ -1,19 +1,16 @@
 package service.service_impl;
 
-import dao.impl.DeviceDAO;
-import model.Device;
-import service.DeviceService;
 
 import java.util.List;
+
+import model.Device;
+import dao.impl.DeviceDAO;
+import service.DeviceService;
+
 
 public class DeviceServiceImpl implements DeviceService {
 
     private DeviceDAO deviceDAO = new DeviceDAO();
-
-    @Override
-    public List<Device> getAllDevice() {
-        return deviceDAO.findAll();
-    }
 
     @Override
     public Device findByName(String name, Integer status) {
@@ -28,5 +25,10 @@ public class DeviceServiceImpl implements DeviceService {
     @Override
     public List<Device> getAll() {
         return deviceDAO.findAll().isEmpty() ? null : deviceDAO.findAll();
+    }
+
+    @Override
+    public List<Device> getAllDevice() {
+        return deviceDAO.findAll();
     }
 }
