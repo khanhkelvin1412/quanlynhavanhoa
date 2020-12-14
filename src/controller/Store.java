@@ -1,55 +1,55 @@
-package controller;
+    package controller;
 
-import java.util.ArrayList;
-import java.util.List;
+    import java.util.ArrayList;
+    import java.util.List;
 
-import javafx.stage.Stage;
-import model.FormTable;
+    import javafx.stage.Stage;
+    import model.FormTable;
 
-public class Store {
-	private static Store instance;
-	private FormTable form;
-	protected List<String> listDevice;
-	private Stage stage;
+    public class Store {
+            private static Store instance;
+            private FormTable form;
+            protected List<String> listDevice;
+            private Stage stage;
 
-	private Store() {
-		setListDevice();
-	}
-	
-	public static Store getInstance() {
-		if(instance == null) {
-			instance = new Store();
-		}
-		return instance;
-	}
+            private Store() {
+                    setListDevice();
+            }
 
-	public FormTable getForm() {
-		return form;
-	}
+            public static Store getInstance() {
+                    if(instance == null) {
+                            instance = new Store();
+                    }
+                    return instance;
+            }
 
-	public void setForm(FormTable form) {
-		this.form = form;
-	}
+            public FormTable getForm() {
+                    return form;
+            }
 
-	public List<String> getListDevice() {
-		return listDevice;
-	}
+            public void setForm(FormTable form) {
+                    this.form = form;
+            }
 
-	public Stage getStage() {
-		return stage;
-	}
+            public List<String> getListDevice() {
+                    return listDevice;
+            }
 
-	public void setStage(Stage stage) {
-		this.stage = stage;
-	}
+            public Stage getStage() {
+                    return stage;
+            }
 
-	public void setListDevice() {
-		listDevice = new ArrayList<>();
-		listDevice.add("Bàn");
-		listDevice.add("Ghế");
-		listDevice.add("Loa");
-		listDevice.add("Đài");
-		listDevice.add("Máy chiếu");
-	}
-}
+            public void setStage(Stage stage) {
+                    this.stage = stage;
+            }
+
+            public void setListDevice() {
+                    listDevice = new ArrayList<>();
+                    listDevice.add("Bàn");
+                    listDevice.add("Ghế");
+                    listDevice.add("Loa");
+                    listDevice.add("Đài");
+                    listDevice.add("Máy chiếu");
+            }
+    }
 
