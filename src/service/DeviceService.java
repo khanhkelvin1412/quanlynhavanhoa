@@ -1,10 +1,11 @@
 package service;
 
-import model.Device;
 
 import java.util.List;
+import model.Device
 
 public interface DeviceService {
+	
     List<Device> getAllDevice();
 
     Device findByName(String name, Integer status);
