@@ -380,22 +380,22 @@ public class RegisterFormController implements Initializable {
         } else{
             form.setTable(0);
         }
-        if (this.numberDeviceRegister.getNumberTable() != null){
+        if (this.numberDeviceRegister.getNumberChair()!= null){
         form.setTable(this.numberDeviceRegister.getNumberChair());
         } else{
             form.setChair(0);
         }
-        if (this.numberDeviceRegister.getNumberTable() != null){
+        if (this.numberDeviceRegister.getNumberRadio()!= null){
         form.setTable(this.numberDeviceRegister.getNumberRadio());
         } else{
             form.setRadio(0);
         }
-        if (this.numberDeviceRegister.getNumberTable() != null){
+        if (this.numberDeviceRegister.getNumberSpeaker()!= null){
         form.setTable(this.numberDeviceRegister.getNumberSpeaker());
         } else{
             form.setSpeaker(0);
         }
-        if (this.numberDeviceRegister.getNumberTable() != null){
+        if (this.numberDeviceRegister.getNumberProjector()!= null){
         form.setTable(this.numberDeviceRegister.getNumberProjector());
         } else{
             form.setProjector(0);
