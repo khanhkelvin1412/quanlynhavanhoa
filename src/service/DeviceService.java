@@ -2,7 +2,7 @@ package service;
 
 
 import java.util.List;
-import model.Device
+import model.Device;
 
 public interface DeviceService {
 	
