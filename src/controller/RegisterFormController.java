@@ -375,11 +375,36 @@ public class RegisterFormController implements Initializable {
         form.setReason(reason.getText());
         form.setStatus(Constants.STATUS.ACTIVATED);
         form.setSum_price(totalPriceFinal);
+        if (this.numberDeviceRegister.getNumberTable() != null){
         form.setTable(this.numberDeviceRegister.getNumberTable());
-        form.setChair(this.numberDeviceRegister.getNumberChair());
-        form.setSpeaker(this.numberDeviceRegister.getNumberSpeaker());
-        form.setRadio(this.numberDeviceRegister.getNumberRadio());
-        form.setProjector(this.numberDeviceRegister.getNumberProjector());
+        } else{
+            form.setTable(0);
+        }
+        if (this.numberDeviceRegister.getNumberTable() != null){
+        form.setTable(this.numberDeviceRegister.getNumberChair());
+        } else{
+            form.setChair(0);
+        }
+        if (this.numberDeviceRegister.getNumberTable() != null){
+        form.setTable(this.numberDeviceRegister.getNumberRadio());
+        } else{
+            form.setRadio(0);
+        }
+        if (this.numberDeviceRegister.getNumberTable() != null){
+        form.setTable(this.numberDeviceRegister.getNumberSpeaker());
+        } else{
+            form.setSpeaker(0);
+        }
+        if (this.numberDeviceRegister.getNumberTable() != null){
+        form.setTable(this.numberDeviceRegister.getNumberProjector());
+        } else{
+            form.setProjector(0);
+        }
+//        form.setTable(this.numberDeviceRegister.getNumberTable());
+//        form.setChair(this.numberDeviceRegister.getNumberChair());
+//        form.setSpeaker(this.numberDeviceRegister.getNumberSpeaker());
+//        form.setRadio(this.numberDeviceRegister.getNumberRadio());
+//        form.setProjector(this.numberDeviceRegister.getNumberProjector());
         form.setRoom(comboBoxFloor.getValue().toString());
 
        Long status =  infoService.save(form);
