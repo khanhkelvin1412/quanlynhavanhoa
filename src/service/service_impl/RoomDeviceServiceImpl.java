@@ -13,4 +13,8 @@ public class RoomDeviceServiceImpl implements RoomDeviceService {
     public Room_Device findByRoomIdAndDeviceId(Long roomId, Long deviceId) {
         return roomDeviceDAO.findByRoomIdAndDeviceId(roomId, deviceId);
     }
+
+    public void test() {
+    	
+    }
 }
