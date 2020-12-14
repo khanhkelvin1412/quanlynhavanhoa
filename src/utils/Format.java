@@ -1,7 +1,8 @@
 package utils;
 
-import java.text.NumberFormat;
 import java.util.Locale;
+import java.text.NumberFormat;
+
 
 public final class Format {
     public static String formatMoney(Long money) {

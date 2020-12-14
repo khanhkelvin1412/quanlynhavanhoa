@@ -2,27 +2,27 @@ package utils;
 
 public interface Constants {
 
+    interface STATUS{
+        Integer DELETED = 0;
+        Integer ACTIVATED = 1;
+    }
+
     interface ROOM{
-        String TYPE = "Phòng ";
-        String DOT = ".";
         String AREA = " mét vuông";
         String PRICE = " giá ";
-    }
-
-    interface STATUS{
-        Integer ACTIVATED = 1;
-        Integer DELETED = 0;
-    }
-
-    interface SENTENCES{
-        String POSITION = "Địa điểm: ";
+        String TYPE = "Phòng ";
+        String DOT = ".";
     }
 
     interface DEVICE{
         String TABLE = "Bàn";
-        String CHAIR = "Ghế";
-        String SPEAKER = "Loa";
         String RADIO = "Đài";
         String PROJECTOR = "Máy chiếu";
+        String CHAIR = "Ghế";
+        String SPEAKER = "Loa";
+    }
+
+    interface SENTENCES{
+        String POSITION = "Địa điểm: ";
     }
 }
