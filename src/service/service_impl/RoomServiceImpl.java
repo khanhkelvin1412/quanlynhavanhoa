@@ -28,6 +28,10 @@ public class RoomServiceImpl implements RoomService {
 
     @Override
     public List<Room> findAll() {
-        return roomDAO.findAll().isEmpty() ? null : roomDAO.findAll();
+        if (roomDAO.findAll().isEmpty()) {
+            return null;
+        } else {
+            return roomDAO.findAll();
+        }
     }
 }
